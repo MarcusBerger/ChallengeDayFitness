@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
 
     public void treinosPadroes(){
 
-        array[0] = "20 Push ups";
+        array[0] = "20 Push ups\n100 Squats";
         array[1] = "100 Squats";
         array[2] = "25 Push ups";
         array[3] = "200 Squats";
@@ -64,24 +64,32 @@ public class MainActivity extends Activity {
 
         treinosPadroes();
         addClickLinester();
-
     }
 
      public void addClickLinester(){
 
-         Button botaoGerar = (Button) findViewById(R.id.gerar);
-         botaoGerar.setOnClickListener(new View.OnClickListener() {
+         Button botaoGerarTreino = (Button) findViewById(R.id.gerar);
+         botaoGerarTreino.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 TextView frase = (TextView)findViewById(R.id.treinoDisplay);
+                 TextView frase = (TextView) findViewById(R.id.treinoDisplay);
                  frase.setText(array[posicao]);
 
                  posicao++;
                  if (posicao == array.length) {
                      posicao = 0;
                  }
+                mudaDia();
              }
          });
+    }
+
+    public void mudaDia(){
+        TextView cDia = (TextView) findViewById(R.id.contarDias);
+        int nDia = Integer.parseInt(cDia.getText().toString()) ;
+        nDia++;
+        //chama validaFina(nDia);
+        cDia.setText(Integer.toString(nDia));
     }
 
     @Override
