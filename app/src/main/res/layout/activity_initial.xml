@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Do you are...?"
+        android:text="I am..."
         android:padding="50dp"
         android:gravity="center"
         android:textColor="#ffffff"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:textSize="40dp"
         android:textColor="#ffffff"
-        android:text="or"
+        android:text="-"
         android:padding="20dp"
         />
 
